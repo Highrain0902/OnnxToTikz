@@ -1,0 +1,94 @@
+{
+    "Conv": {
+        "width": 0.7,
+        "height": 15,
+        "depth": 15,
+        "color": "lightred",
+        "caption": "Conv"
+    },
+    "Relu": {
+        "width": 1,
+        "height": 1,
+        "depth": 1,
+        "color": "lightpink",
+        "caption": "Relu"
+    },
+    "ConvReLU": {
+        "width": 0.7,
+        "height": 15,
+        "depth": 15,
+        "color": "lightred",
+        "caption": "ConvRelu"
+    },
+    "MaxPool": {
+        "width": 0.5,
+        "height": 3,
+        "depth": 3,
+        "color": "lightblue",
+        "caption": "MaxPool"
+    },
+    "FullyConnected": {
+        "width": 1,
+        "height": 1,
+        "depth": 7,
+        "color": "lightgreen",
+        "caption": "FC"
+    },
+    "Gemm": {
+        "width": 1,
+        "height": 1,
+        "depth": 7,
+        "color": "lightgreen",
+        "caption": "FC"
+    },
+    "BatchNormalization": {
+        "width": 1,
+        "height": 1,
+        "depth": 1,
+        "color": "lightgreen",
+        "caption": "BN"
+    },
+    "Dropout": {
+        "width": 1.5,
+        "height": 1,
+        "depth": 1,
+        "color": "lightgreen",
+        "caption": "Dropout"
+    },
+    "Flatten": {
+        "width": 1.5,
+        "height": 1.5,
+        "depth": 15,
+        "color": "darkred",
+        "caption": "Flatten"
+    },
+    "Add": {
+        "width": 1.5,
+        "height": 1.5,
+        "depth": 1.5,
+        "color": "lightblue",
+        "caption": "Add"
+    },
+    "Concat": {
+        "width": 1,
+        "height": 1.5,
+        "depth": 1.5,
+        "color": "lightblue",
+        "caption": "Concat"
+    },
+    "GlobalAveragePool": {
+        "width": 2,
+        "height": 1,
+        "depth": 1.5,
+        "color": "lightblue",
+        "caption": "AveragePool"
+    },
+    "Softmax": {
+        "width": 1,
+        "height": 1,
+        "depth": 3,
+        "color": "lightgray",
+        "caption": "Softmax"
+    }
+
+}

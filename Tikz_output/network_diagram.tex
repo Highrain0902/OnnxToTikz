@@ -1,0 +1,47 @@
+\documentclass[tikz,multi, border=10pt]{standalone}
+\usetikzlibrary{quotes,arrows,positioning,3d, decorations.markings, calc}
+\usepackage{xcolor}
+\usepackage{../layer/Box}
+\usepackage{../layer/Arrow}
+\usepackage{../layer/Ball}
+\begin{document}
+\begin{tikzpicture}
+\definecolor{lightred}{RGB}{167, 121, 121}
+\definecolor{lightpink}{RGB}{228, 206, 206}
+\definecolor{lightblue}{RGB}{166, 194, 212}
+\definecolor{lightblue2}{RGB}{153, 164, 185}
+\definecolor{lightgreen}{RGB}{188, 203, 178}
+\definecolor{darkred}{RGB}{150, 80, 75}
+\definecolor{lightgray}{RGB}{164, 152, 133}
+\node [canvas is zy plane at x=0] at (0,0,0) {\includegraphics[width=15cm]{sample.png}};
+\pic[shift={(1, 0, 0)}] at (0,0,0) {vecArrow={name=input,caption=none, opacity=1,fill=black, scriptscale=0.2,length=3,tall=0.08,tipsize=0.2,border=none}};
+\pic[shift={(5, 0, 0)}] at (0, 0, 0) {ConvReLU={name=0, caption=ConvRelu,opacity=0.6, zlabel=1*3*224*224, fill=lightred, scriptscale=1, width=0.7, height=15, depth=15, border=black}};
+\pic[shift={(0, 0, 0)}] at (0-right) {ConvReLU={name=1, caption=ConvRelu, opacity=0.6,  zlabel=1*64*224*224, fill=lightred, scriptscale=1, width=0.7, height=15, depth=15, border=black}};
+\pic[shift={(0, 0, 0)}] at (1-right) {BaseBox={name=2, caption=MaxPool, opacity=0.6,  zlabel=1*64*224*224, fill=lightblue, scriptscale=1, width=0.5, height=15, depth=15, border=black}};
+\pic[shift={(0, 0, 0)}] at (2-right) {vecArrow={name=arrow0,caption=none, opacity=0.7,fill=black, scriptscale=0.2,length=3,tall=0.08,tipsize=0.2,border=none}};
+\pic[shift={(.3, 0, 0)}] at (arrow0-right) {ConvReLU={name=3, caption=ConvRelu, opacity=0.6,  zlabel=1*64*112*112, fill=lightred, scriptscale=1, width=0.7, height=10, depth=10, border=black}};
+\pic[shift={(0, 0, 0)}] at (3-right) {ConvReLU={name=4, caption=ConvRelu, opacity=0.6,  zlabel=1*128*112*112, fill=lightred, scriptscale=1, width=0.7, height=10, depth=10, border=black}};
+\pic[shift={(0, 0, 0)}] at (4-right) {BaseBox={name=5, caption=MaxPool, opacity=0.6,  zlabel=1*128*112*112, fill=lightblue, scriptscale=1, width=0.5, height=10, depth=10, border=black}};
+\pic[shift={(0, 0, 0)}] at (5-right) {vecArrow={name=arrow1,caption=none, opacity=0.7,fill=black, scriptscale=0.2,length=3,tall=0.08,tipsize=0.2,border=none}};
+\pic[shift={(.3, 0, 0)}] at (arrow1-right) {ConvReLU={name=6, caption=ConvRelu, opacity=0.6,  zlabel=1*128*56*56, fill=lightred, scriptscale=1, width=0.7, height=8, depth=8, border=black}};
+\pic[shift={(0, 0, 0)}] at (6-right) {ConvReLU={name=7, caption=ConvRelu, opacity=0.6,  zlabel=1*256*56*56, fill=lightred, scriptscale=1, width=0.7, height=8, depth=8, border=black}};
+\pic[shift={(0, 0, 0)}] at (7-right) {ConvReLU={name=8, caption=ConvRelu, opacity=0.6,  zlabel=1*256*56*56, fill=lightred, scriptscale=1, width=0.7, height=8, depth=8, border=black}};
+\pic[shift={(0, 0, 0)}] at (8-right) {BaseBox={name=9, caption=MaxPool, opacity=0.6,  zlabel=1*256*56*56, fill=lightblue, scriptscale=1, width=0.5, height=8, depth=8, border=black}};
+\pic[shift={(0, 0, 0)}] at (9-right) {vecArrow={name=arrow2,caption=none, opacity=0.7,fill=black, scriptscale=0.2,length=3,tall=0.08,tipsize=0.2,border=none}};
+\pic[shift={(.3, 0, 0)}] at (arrow2-right) {ConvReLU={name=10, caption=ConvRelu, opacity=0.6,  zlabel=1*256*28*28, fill=lightred, scriptscale=1, width=0.7, height=6, depth=6, border=black}};
+\pic[shift={(0, 0, 0)}] at (10-right) {ConvReLU={name=11, caption=ConvRelu, opacity=0.6,  zlabel=1*512*28*28, fill=lightred, scriptscale=1, width=0.7, height=6, depth=6, border=black}};
+\pic[shift={(0, 0, 0)}] at (11-right) {ConvReLU={name=12, caption=ConvRelu, opacity=0.6,  zlabel=1*512*28*28, fill=lightred, scriptscale=1, width=0.7, height=6, depth=6, border=black}};
+\pic[shift={(0, 0, 0)}] at (12-right) {BaseBox={name=13, caption=MaxPool, opacity=0.6,  zlabel=1*512*28*28, fill=lightblue, scriptscale=1, width=0.5, height=6, depth=6, border=black}};
+\pic[shift={(0, 0, 0)}] at (13-right) {vecArrow={name=arrow3,caption=none, opacity=0.7,fill=black, scriptscale=0.2,length=3,tall=0.08,tipsize=0.2,border=none}};
+\pic[shift={(.3, 0, 0)}] at (arrow3-right) {ConvReLU={name=14, caption=ConvRelu, opacity=0.6,  zlabel=1*512*14*14, fill=lightred, scriptscale=1, width=0.7, height=6, depth=6, border=black}};
+\pic[shift={(0, 0, 0)}] at (14-right) {ConvReLU={name=15, caption=ConvRelu, opacity=0.6,  zlabel=1*512*14*14, fill=lightred, scriptscale=1, width=0.7, height=6, depth=6, border=black}};
+\pic[shift={(0, 0, 0)}] at (15-right) {ConvReLU={name=16, caption=ConvRelu, opacity=0.6,  zlabel=1*512*14*14, fill=lightred, scriptscale=1, width=0.7, height=6, depth=6, border=black}};
+\pic[shift={(0, 0, 0)}] at (16-right) {BaseBox={name=17, caption=MaxPool, opacity=0.6,  zlabel=1*512*14*14, fill=lightblue, scriptscale=1, width=0.5, height=6, depth=6, border=black}};
+\pic[shift={(0, 0, 0)}] at (17-right) {vecArrow={name=arrow4,caption=none, opacity=0.7,fill=black, scriptscale=0.2,length=3,tall=0.08,tipsize=0.2,border=none}};
+\pic[shift={(.3, 0, 0)}] at (arrow4-right) {BaseBox={name=18, caption=Flatten, opacity=0.6,  zlabel=1*512*7*7, fill=darkred, scriptscale=1, width=1.5, height=1.5, depth=15, border=black}};
+\pic[shift={(0, 0, 0)}] at (18-right) {vecArrow={name=arrow5,caption=none, opacity=0.7,fill=black, scriptscale=0.2,length=3,tall=0.08,tipsize=0.2,border=none}};
+\pic[shift={(.3,0,0)}] at (arrow5-right) {PixelShuffle={ name=19, opacity=0.6,zlabel=1*25088, caption=FC,fill=lightgreen, scriptscale=1, height=1, width=1,depth=12,border=black,dist=4,scalefactor=0.6,connectlineopacity=0.7, zzlabel=1*4096 ,ccaption=FC }};
+\pic[shift={(0, 0, 0)}] at (19-right) {vecArrow={name=arrow6,caption=none, opacity=0.7,fill=black, scriptscale=0.2,length=3,tall=0.08,tipsize=0.2,border=none}};
+\pic[shift={(.5, 0, 0)}] at (arrow6-right) {Ball={name=output,radius=3,fill=lightgray,opacity=0.6,logo = ,caption=output}};
+\end{tikzpicture}
+\end{document}
