@@ -15,11 +15,6 @@ This project provides a tool to convert ONNX neural network models into a TikZ d
 - NumPy
 - ONNX Runtime (optional, for more advanced ONNX functionality)
 
-You can install the required Python libraries using `pip`:
-
-```bash
-pip install onnx numpy onnxruntime
-```
 
 ### **Files Included:**
 1. **Main.py** – The entry point script that coordinates the entire process.
