@@ -5,7 +5,7 @@
 
 This project provides a tool to convert ONNX neural network models into a TikZ diagram, which can be used for visualizing the structure of the network in LaTeX documents. The tool parses ONNX models, allows layer filtering, combines specific types of layers (e.g., Conv + ReLU), and generates a TikZ representation of the network.
 
-[vgg16]{Tikz_output/network_diagram.pdf}
+[VGG16 Network Diagram](Tikz_output/network_diagram.pdf)
 
 ---
 
