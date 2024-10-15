@@ -13,7 +13,7 @@ This project provides a tool to convert ONNX neural network models into a TikZ d
 - Python 3.x
 - ONNX
 - NumPy
-- ONNX Runtime (optional, for more advanced ONNX functionality)
+- ONNX Runtime 
 
 
 ### **Files Included:**
