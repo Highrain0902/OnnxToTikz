@@ -32,18 +32,14 @@ This project provides a tool to convert ONNX neural network models into a TikZ d
 
 Run the main script `Main.py` to start the ONNX to TikZ conversion:
 
-```bash
-python Main.py
-```
-
 ### **Steps**
 
 1. **Input the ONNX File**:  
-   You will be prompted to provide the path to your ONNX file.
+   You will be prompted to provide the path to your ONNX file.(You can find examples of onnx model generation in the EXAMPLE folder)
    
    Example:
    ```
-   Enter the path to the ONNX file: my_model.onnx
+   Enter the path to the ONNX file: ./EXAMPLE/Alexnet/model.onnx
    ```
 
 2. **Filter Layers**:  
@@ -57,7 +53,7 @@ python Main.py
    2: MaxPool (maxpool1)
    ...
    
-   Enter the indices of layers you want to delete, separated by commas (or press Enter to keep all): 1
+   Enter the indices of layers you want to delete, separated by commas (or press Enter to keep all): 1,2,3
    ```
 
 3. **Combining Layers**:
@@ -103,22 +99,5 @@ Stores the configuration for different layer types, including properties like wi
 ## **Output**
 
 The output is a LaTeX file (`network_diagram.tex`) containing TikZ code to visualize the ONNX model structure. You can include this file in your LaTeX documents to produce the network diagram.
-
-### **Example of including TikZ in LaTeX**:
-
-```latex
-\documentclass{article}
-\usepackage{tikz}
-\begin{document}
-    \input{Tikz_output/network_diagram.tex}
-\end{document}
-```
-
----
-
-## **Customization**
-
-- You can modify the `layer_shapes.json` file to customize the colors, sizes, and styles of different layers in the generated TikZ code.
-- The TikZ code generation logic can also be adjusted in the `generate_tikzcode.py` file if needed.
 
 ---
