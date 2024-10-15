@@ -89,7 +89,7 @@ Includes two main functionalities:
 2. **process_layer_relationships** and **combine_fc_layers**: Handle the combination of Conv + ReLU and Fully Connected layers, respectively.
 
 ### **generate_tikzcode.py**
-Generates the LaTeX TikZ code to represent the network layers, utilizing the layout, colors, and sizes defined in the `layer_shapes.json` file. This code defines the structure and style of the network diagram.
+Generates the LaTeX TikZ code to represent the network layers, utilizing the layout, colors, and sizes defined in the `layer_shapes.json` file and styles in layer folder. This code defines the structure and style of the network diagram.
 
 ### **layer_shapes.json**
 Stores the configuration for different layer types, including properties like width, height, depth, and color. These configurations are applied during the TikZ code generation.
