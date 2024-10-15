@@ -1,5 +1,5 @@
 
-# **ONNX to TikZ Converter User Guide**
+# **ONNX to TikZ**
 
 ## **Overview**
 
