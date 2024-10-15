@@ -22,6 +22,7 @@ This project provides a tool to convert ONNX neural network models into a TikZ d
 3. **filter_layers.py** – Handles the logic for filtering and combining layers based on user input.
 4. **generate_tikzcode.py** – Generates TikZ code for visualizing the ONNX model.
 5. **layer_shapes.json** – Contains configuration for the shapes, colors, and sizes of different layer types in the TikZ output.
+6. **layer FOLDER** – Contains style packages of Box, Arrow and Ball.
 
 ---
 
